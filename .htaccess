@@ -49,6 +49,6 @@ AddType application/x-font-woff .woff
 </IfModule>
 
 #If rewrite mod isn't enabled
-ErrorDocument 404 /project-prestashop/index.php?controller=404
+ErrorDocument 404 index.php?controller=404
 
 # ~~end~~ Do not remove this comment, Prestashop will keep automatically the code outside this comment when .htaccess will be generated again
