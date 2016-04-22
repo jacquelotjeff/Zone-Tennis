@@ -7230,10 +7230,10 @@ div.star a:hover {
     width: 20px; }
 
 .footer-container {
-  background-color: #333; }
+  background-color: #191919; }
   @media (min-width: 768px) {
     .footer-container {
-      background: url(../img/footer-bg.png) repeat-x #333; } }
+      background: repeat-x #191919; } }
   .footer-container .container {
     padding-bottom: 100px; }
   .footer-container #footer {
@@ -7372,12 +7372,16 @@ div.star a:hover {
             text-align: center; } }
     .footer-container #footer .bottom-footer {
       position: absolute;
-      bottom: -55px;
+      bottom: -34px;
+      background-color: #161616;
       left: 0; }
       .footer-container #footer .bottom-footer div {
         padding: 15px 0 0 0;
         border-top: 1px solid #515151;
         width: 100%; }
+        .bottom-footer {
+          width: 100%;
+        }
 
 #reinsurance_block {
   clear: both !important; }
