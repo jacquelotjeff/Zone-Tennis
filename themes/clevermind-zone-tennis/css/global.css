@@ -87,6 +87,10 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%; }
 
+.font-oswald {
+  font-family : 'Oswald', sans-serif;
+}
+
 body {
   margin: 0; }
 
@@ -7252,7 +7256,8 @@ div.star a:hover {
       .footer-container #footer a:hover {
         color: #fff; }
     .footer-container #footer h4 {
-      font: 600 18px/22px "Open Sans", sans-serif;
+      font-family : 'Oswald', sans-serif;
+      text-transform: uppercase;
       color: #fff;
       margin: 0 0 13px 0;
       cursor: pointer; }
@@ -7364,7 +7369,6 @@ div.star a:hover {
         margin-bottom: 0;
         font-size: 21px;
         line-height: 25px;
-        text-transform: none;
         padding: 0 10px 0 0; }
         @media (max-width: 767px) {
           .footer-container #footer #social_block h4 {
