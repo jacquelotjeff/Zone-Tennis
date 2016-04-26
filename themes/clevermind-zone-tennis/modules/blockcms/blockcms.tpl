@@ -68,7 +68,7 @@
 	<!-- Block CMS module footer -->
 	<section class="footer-block col-xs-12 col-sm-2" id="block_various_links_footer">
 		<h4>{l s='Information' mod='blockcms'}</h4>
-		<ul class="toggle-footer">
+		<ul class="toggle-footer bullet">
 			{if isset($show_price_drop) && $show_price_drop && !$PS_CATALOG_MODE}
 				<li class="item">
 					<a href="{$link->getPageLink('prices-drop')|escape:'html':'UTF-8'}" title="{l s='Specials' mod='blockcms'}">
@@ -123,8 +123,9 @@
 		</ul>
 		{$footer_text}
 	</section>
+	
 	{if $display_poweredby}
-	<section class="bottom-footer col-xs-12">
+	<section class="bottom-footer">
 		<div>
 			{l s='[1] %3$s %2$s - Ecommerce software by %1$s [/1]' mod='blockcms' sprintf=['PrestaShop™', 'Y'|date, '©'] tags=['<a class="_blank" href="http://www.prestashop.com">'] nocache}
 		</div>
