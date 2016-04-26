@@ -7244,6 +7244,31 @@ div.star a:hover {
     color: #777777; }
     .footer-container #footer .row {
       position: relative; }
+    .footer-container ul.bullet {
+      list-style: disc;
+      margin-left: 12px;
+    }
+    .footer-container ul.bullet li a:before {
+      content: "";
+      border-color: transparent;
+      border-style: solid;
+      border-width: 0.35em 0 0.35em 0.45em;
+      display: inline-block;
+      height: 0;
+      width: 0;
+      left: -1.4em;
+      top: 0em;
+      position: relative;
+    }
+    .footer-container ul.bullet li a:hover:before {
+      -webkit-transition: left 0.3s linear, border-color 0.3s linear;
+      -moz-transition: left 0.3s linear, border-color 0.3s linear;
+      -o-transition: left 0.3s linear, border-color 0.3s linear;
+      transition: left 0.3s linear, border-color 0.3s linear;
+      border-color: transparent #FFF;
+      left: -0.8em;
+    }
+
     .footer-container #footer ul.row {
       position: static; }
     .footer-container #footer .footer-block {
@@ -7252,13 +7277,13 @@ div.star a:hover {
         .footer-container #footer .footer-block {
           margin-top: 20px; } }
     .footer-container #footer a {
-      color: #777777; }
+      color: #ccc; }
       .footer-container #footer a:hover {
         color: #fff; }
     .footer-container #footer h4 {
       font-family : 'Oswald', sans-serif;
       text-transform: uppercase;
-      color: #fff;
+      color: #ccc;
       margin: 0 0 13px 0;
       cursor: pointer; }
       @media (max-width: 767px) {
@@ -7276,7 +7301,7 @@ div.star a:hover {
           .footer-container #footer h4.active:after {
             content: "\f056"; } }
       .footer-container #footer h4 a {
-        color: #fff; }
+        color: #ccc; }
     .footer-container #footer ul li {
       padding-bottom: 8px; }
       .footer-container #footer ul li a {
@@ -7307,8 +7332,6 @@ div.star a:hover {
             padding-right: 12px;
             float: left;
             color: #908f8f; }
-    .footer-container #footer .blockcategories_footer {
-      clear: left; }
     .footer-container #footer #social_block {
       float: left;
       width: 50%;
