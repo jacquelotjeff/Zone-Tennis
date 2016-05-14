@@ -5,7 +5,7 @@
 		<ul class="sf-menu clearfix menu-content">
 			{$MENU}
 			{if $MENU_SEARCH}
-				<li class="sf-search noBack" style="float:right">
+				<li class="sf-search noBack" >
 					<form id="searchbox" action="{$link->getPageLink('search')|escape:'html':'UTF-8'}" method="get">
 						<p>
 							<input type="hidden" name="controller" value="search" />
