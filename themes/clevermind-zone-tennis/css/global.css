@@ -5733,7 +5733,7 @@ textarea {
 
 #index .tab-content {
   margin-top: 35px;
-  margin-bottom: 34px; }
+  margin-bottom: 73px; }
 
 header {
   z-index: 1;
@@ -8600,3 +8600,23 @@ div.star.star_hover:after {
   cursor: pointer; }
 
 /*# sourceMappingURL=global.css.map */
+.title {
+    float: left;
+    margin: 40px 0 5px;
+    text-align: center;
+    width: 100%;
+}
+.title > h2 > span::before {
+    background: #ffc000 none repeat scroll 0 0;
+    bottom: -13.5%;
+    content: "";
+    height: 1px;
+    left: 50%;
+    margin-left: -38px;
+    position: absolute;
+    width: 76px;
+}
+.title_p{
+  padding-top: 18px;
+  margin: 0 0 9px;
+}
