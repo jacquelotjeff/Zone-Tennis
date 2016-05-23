@@ -22,16 +22,14 @@
 *  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
 *}
-
-</style>
 {if isset($htmlitems) && $htmlitems}
-<div {if $hook == 'footer'} class="footer-block col-xs-12 col-sm-4"{/if}>
+<div class="col-xs-12 col-md-12" style="float:left;">
 	<ul class="htmlcontent-home clearfix row">
 		{foreach name=items from=$htmlitems item=hItem}
 			{if $hook == 'left' || $hook == 'right'}
-				<li class="htmlcontent-item-{$smarty.foreach.items.iteration|escape:'htmlall':'UTF-8'} col-xs-12">
+				<li class="htmlcontent-item-{$smarty.foreach.items.iteration|escape:'htmlall':'UTF-8'} col-xs-12 col-md-4">
 			{else}
-				<li class="htmlcontent-item-{$smarty.foreach.items.iteration|escape:'htmlall':'UTF-8'} col-xs-4">
+				<li class="htmlcontent-item-{$smarty.foreach.items.iteration|escape:'htmlall':'UTF-8'} col-xs-12 col-md-4">
 			{/if}
 					{if $hItem.url}
 						<a href="{$hItem.url|escape:'htmlall':'UTF-8'}" class="item-link"{if $hItem.target == 1} onclick="return !window.open(this.href);"{/if} title="{$hItem.title|escape:'htmlall':'UTF-8'}">
