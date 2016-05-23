@@ -24,7 +24,7 @@
 *}
 <!-- MODULE Block cart -->
 {if isset($blockcart_top) && $blockcart_top}
-<div class="col-sm-11 "></div>
+<div class="col-sm-11"></div>
 <div class="col-sm-1 clearfix{if $PS_CATALOG_MODE} header_user_catalog{/if}">
 {/if}
 	<div class="shopping_cart">
