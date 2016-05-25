@@ -3,8 +3,8 @@
     <h4>Nous trouver</h4>
     <div class="block_content">
         <p>Hello,
-            {if isset($adress) && $adress}
-                {$adress}
+            {if isset($address) && $address}
+                {$address}
             {else}
                 Aucune adresse définie.
             {/if}
