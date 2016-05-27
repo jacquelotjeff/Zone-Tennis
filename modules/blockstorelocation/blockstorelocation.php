@@ -5,7 +5,6 @@ if ( !defined('_PS_VERSION_'))
 
 class BlockStoreLocation extends Module {
 
-	private $tableName = 'store_location';
 	public function __construct()
 	{
 		$this->name             = 'blockstorelocation';
@@ -28,57 +27,19 @@ class BlockStoreLocation extends Module {
 
 	public function install()
 	{
-		if ( !parent::install() || !$this->registerHook('displayHome') || !$this->registerHook('header') )
+		if ( !parent::install() || !Configuration::updateValue('BLOCK_STORE_LOCATION_ADDRESS', 'Paris') ||
+			!$this->registerHook('leftColumn'))
 			return false;
-
-		if (false === $this->installDB())
-			return false;
-
-		// Create default values
-		$title       = 'Notre magasin';
-		$description = "Lorem ipsum ...";
-		$address     = "Paris";
-
-		Db::getInstance()->insert($this->tableName, array(
-			'title'       => $title,
-			'description' => $description,
-			'address'     => $address,
-		));
 
 		return true;
-	}
-
-	public function installDB()
-	{
-		return Db::getInstance()->execute('
-		CREATE TABLE `'._DB_PREFIX_.$this->tableName.'` (
-			`id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-			`title` VARCHAR(255) NOT NULL,
-			`description` TEXT,
-			`address` VARCHAR(255) NOT NULL,
-			PRIMARY KEY (`id`)
-			) DEFAULT CHARSET=utf8;');
 	}
 
 	public function uninstall()
 	{
-		if ( !parent::uninstall() )
-			return false;
-
-		if (false === $this->uninstallDB())
+		if ( !parent::uninstall() || !configuration::deleteByName('BLOCK_STORE_LOCATION_ADDRESS'))
 			return false;
 
 		return true;
-	}
-
-	/**
-	 * Drop table
-	 * @return bool
-	 */
-	public function uninstallDB()
-	{
-		return Db::getInstance()->execute('
-		DROP TABLE `'._DB_PREFIX_.$this->tableName.'`;');
 	}
 
 	public function getContent()
@@ -86,59 +47,26 @@ class BlockStoreLocation extends Module {
 		$output = null;
 
 		if (Tools::isSubmit('submit'.$this->name)) {
-			$title       = strval(Tools::getValue('BLOCK_STORE_LOCATION_TITLE'));
-			$description = strval(Tools::getValue('BLOCK_STORE_LOCATION_DESCRIPTION'));
-			$address     = strval(Tools::getValue('BLOCK_STORE_LOCATION_ADDRESS'));
+			$myoption_txt = strval(Tools::getValue('BLOCK_STORE_LOCATION_ADDRESS'));
 
-			if (!$title || empty($title) || !Validate::isGenericName($title) ||
-				!Validate::isGenericName($description) ||
-				!$address || empty($address) || !Validate::isGenericName($address)
-			) {
-				$output .= $this->displayError($this->l('Configuration invalide !.'));
+			if (!$myoption_txt || empty($myoption_txt) || !Validate::isGenericName($myoption_txt)) {
+				$output .= $this->displayError($this->l('Configuration invalide.'));
 			} else {
-				$response = $this->update($title, $description, $address);
-
-				if (false === $response)
-					$output .= $this->displayError($this->l('Une erreur s\'est produite lors de la mise à jour.'));
-
-				$output .= $this->displayConfirmation($this->l('Configuration valide.'));
+				Configuration::updateValue('MYOPTION', $myoption_txt);
+				$output .= $this->displayConfirmation($this->l('Configuration invalide.'));
 			}
 		}
 
 		return $output.$this->displayForm();
 	}
 
-	public function hookDisplayHome($params)
+	public function hookDisplayLeftColumn($params)
 	{
-		$data = $this->getData();
 		$this->context->smarty->assign([
-			'title'       => $data['title'],
-			'description' => $data['description'],
-			'address'     => $data['address'],
+			'adress' => Configuration::get('BLOCK_STORE_LOCATION_ADDRESS'),
 		]);
 
 		return $this->display(__FILE__, 'blockstorelocation.tpl');
-	}
-
-	public function hookDisplayHeader($params)
-	{
-		$data = $this->getData();
-		$content = '<script>var title = "'.$data["title"].'";
-		 var description = "'.$data["description"].'";
-		 var address = "'.$data["address"].'";</script>';
-
-		// Obliger de mettre les liens comme ça, sinon variables non définies ...
-		$content .= '<script src="https://maps.googleapis.com/maps/api/js"></script>';
-		$content .= '<script src="'.$this->_path.'views/js/blockstorelocation.js"></script>';
-//		$this->context->controller->addJS('https://maps.googleapis.com/maps/api/js', false);
-//		$this->context->controller->addJS($this->_path.'views/js/blockstorelocation.js', true);
-
-		return $content;
-	}
-
-	public function hookBackOfficeHeader()//note the case of hook name
-	{
-
 	}
 
 	public function displayForm()
@@ -150,25 +78,11 @@ class BlockStoreLocation extends Module {
 			'input' => [
 				[
 					'type'     => 'text',
-					'label'    => $this->l('Titre pour le marqueur'),
-					'name'     => 'BLOCK_STORE_LOCATION_TITLE',
-					'size'     => 20,
-					'required' => true,
-				],
-				[
-					'type'     => 'textarea',
-					'label'    => $this->l('Description pour le marqueur'),
-					'name'     => 'BLOCK_STORE_LOCATION_DESCRIPTION',
-					'size'     => 20,
-					'required' => false,
-				],
-				[
-					'type'     => 'text',
-					'label'    => $this->l('Adresse du magasin'),
+					'label'    => $this->l('Adresse à marquer'),
 					'name'     => 'BLOCK_STORE_LOCATION_ADDRESS',
 					'size'     => 20,
 					'required' => true,
-				],
+				]
 			],
 			'submit' => [
 				'title' => $this->l('Envoyer'),
@@ -177,7 +91,7 @@ class BlockStoreLocation extends Module {
 		];
 
 		$default_lang = (int) Configuration::get('PS_LANG_DEFAULT');
-		$helper       = new HelperForm();
+		$helper = new HelperForm();
  
 		// Module, Token and currentIndex
 		$helper->module = $this;
@@ -186,15 +100,15 @@ class BlockStoreLocation extends Module {
 		$helper->currentIndex = AdminController::$currentIndex.'&configure='.$this->name;
 		 
 		// Language
-		$helper->default_form_language    = $default_lang;
+		$helper->default_form_language = $default_lang;
 		$helper->allow_employee_form_lang = $default_lang;
 		 
 		// title and Toolbar
-		$helper->title          = $this->displayName;
-		$helper->show_toolbar   = true;        // false -> remove toolbar
+		$helper->title = $this->displayName;
+		$helper->show_toolbar = true;        // false -> remove toolbar
 		$helper->toolbar_scroll = true;      // yes - > Toolbar is always visible on the top of the screen.
-		$helper->submit_action  = 'submit'.$this->name;
-		$helper->toolbar_btn    = array(
+		$helper->submit_action = 'submit'.$this->name;
+		$helper->toolbar_btn = array(
 		    'save' =>
 		    array(
 		        'desc' => $this->l('Save'),
@@ -208,33 +122,9 @@ class BlockStoreLocation extends Module {
 		);
 		 
 		// Load current value
-		$data = $this->getData();
-		$helper->fields_value['BLOCK_STORE_LOCATION_TITLE']       = $data['title'];
-		$helper->fields_value['BLOCK_STORE_LOCATION_DESCRIPTION'] = $data['description'];
-		$helper->fields_value['BLOCK_STORE_LOCATION_ADDRESS']     = $data['address'];
-
+		$helper->fields_value['BLOCK_STORE_LOCATION_ADDRESS'] = Configuration::get('BLOCK_STORE_LOCATION_ADDRESS');
+		 
 		return $helper->generateForm($fields_form);
-	}
 
-	public function getData()
-	{
-		$sql = 'SELECT * FROM '._DB_PREFIX_.$this->tableName;
-		if ($results = Db::getInstance()->getRow($sql))
-			return $results;
-
-		return false;
-	}
-
-	public function update($title, $description, $address)
-	{
-		$sql = 'UPDATE '._DB_PREFIX_.$this->tableName.' SET title="'.$title.'",
-			description="'.$description.'",
-			address="'.$address.'"
-			where id = "'.$this->getData()['id'].'"';
-
-		if (!Db::getInstance()->execute($sql))
-			return false;
-
-		return true;
 	}
 }
