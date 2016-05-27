@@ -4615,8 +4615,7 @@ background: black;
 max-height: 100%; }
 header .banner .row {
 margin: 0px; }
-header .nav {
-background: #333; }
+
 header .nav .row {
 margin: 0px; }
 header .nav nav {
@@ -6052,11 +6051,11 @@ display: none; }
 .ie8 .breadcrumb .navigation-pipe {
 width: 20px; }
 .footer-container {
- background: #3f3f3f;
+ background: #222;
  }
 @media (min-width: 768px) {
   .footer-container {
-   background: url(../img/footer-bg.png) repeat-x;
+   background: #222;
    }
   }
 .footer-container .container {
