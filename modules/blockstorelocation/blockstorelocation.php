@@ -120,9 +120,25 @@ class BlockStoreLocation extends Module {
 		return $this->display(__FILE__, 'blockstorelocation.tpl');
 	}
 
-	public function hookDisplayHeader()
+	public function hookDisplayHeader($params)
 	{
-		//$this->context->controller->addCSS($this->_path.'presmodule.css', 'all');
+		$data = $this->getData();
+		$content = '<script>var title = "'.$data["title"].'";
+		 var description = "'.$data["description"].'";
+		 var address = "'.$data["address"].'";</script>';
+
+		// Obliger de mettre les liens comme ça, sinon variables non définies ...
+		$content .= '<script src="https://maps.googleapis.com/maps/api/js"></script>';
+		$content .= '<script src="'.$this->_path.'views/js/blockstorelocation.js"></script>';
+//		$this->context->controller->addJS('https://maps.googleapis.com/maps/api/js', false);
+//		$this->context->controller->addJS($this->_path.'views/js/blockstorelocation.js', true);
+
+		return $content;
+	}
+
+	public function hookBackOfficeHeader()//note the case of hook name
+	{
+
 	}
 
 	public function displayForm()
@@ -161,7 +177,7 @@ class BlockStoreLocation extends Module {
 		];
 
 		$default_lang = (int) Configuration::get('PS_LANG_DEFAULT');
-		$helper = new HelperForm();
+		$helper       = new HelperForm();
  
 		// Module, Token and currentIndex
 		$helper->module = $this;
