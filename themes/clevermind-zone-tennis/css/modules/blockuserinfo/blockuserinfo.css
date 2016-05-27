@@ -1,18 +1,23 @@
 .header_user_info {
   float: right;
-  border-left: 1px solid #515151;
-  border-right: 1px solid #515151; }
+  /*border-left: 1px solid #515151;
+  border-right: 1px solid #515151;*/
+   }
   .header_user_info a {
-    color: #fff;
-    font-weight: bold;
+    color: #484848;
     display: block;
     padding: 8px 9px 11px 8px;
     cursor: pointer;
-    line-height: 18px; }
+    line-height: 18px; 
+    margin-right:50%;
+    margin-top:15px;
+    font: 15px Oswald,serif !important;
+  }
     @media (max-width: 479px) {
       .header_user_info a {
         font-size: 11px; } }
     .header_user_info a:hover, .header_user_info a.active {
-      background: #2b2b2b; }
+      color: #ffc000; }
 
 /*# sourceMappingURL=blockuserinfo.css.map */
+
