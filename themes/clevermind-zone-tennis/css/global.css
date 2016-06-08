@@ -5359,7 +5359,7 @@ margin-bottom: 0px; } }
 margin-bottom: 20px; } }
 .block .title_block,
 .block h4 {
-font: 600 18px/22px "Open Sans", sans-serif;
+font: 600 18px/22px "Oswald", sans-serif;
 color: #555454;
 background: #f6f6f6;
 border-top: 5px solid #333;
@@ -5377,7 +5377,7 @@ position: relative; }
 .block .title_block:after,
 .block h4:after {
 display: block;
-font-family: "FontAwesome";
+font-family: 'Oswald', sans-serif;
 content: "";
 position: absolute;
 right: 0;
@@ -5455,13 +5455,14 @@ margin-bottom: 14px; }
 font: 700 14px/17px Arial, Helvetica, sans-serif;
 padding: 1px 6px; }
 .page-heading {
-font: 600 18px/22px "Open Sans", sans-serif;
+font: 600 18px/22px "Oswald", sans-serif;
 color: #555454;
 text-transform: uppercase;
 padding: 0px 0px 17px 0px;
 margin-bottom: 30px;
 border-bottom: 1px solid #d6d4d4;
 overflow: hidden; }
+.page-heading img { width: 30px;  margin-right: 10px; vertical-align: middle; }
 .page-heading span.heading-counter {
 font: bold 13px/22px Arial, Helvetica, sans-serif;
 float: right;
