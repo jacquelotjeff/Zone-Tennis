@@ -28,8 +28,8 @@ class BlockStoreLocation extends Module {
 
 	public function install()
 	{
-		if ( !parent::install() || !$this->registerHook('displayHome') || !$this->registerHook('header') )
-			return false;
+		if ( !parent::install() || !$this->registerHook('displayHome') || !$this->registerHook('header') || !$this->registerHook('displayBackOfficeHeader') )
+			return false;	
 
 		if (false === $this->installDB())
 			return false;
@@ -136,9 +136,12 @@ class BlockStoreLocation extends Module {
 		return $content;
 	}
 
-	public function hookBackOfficeHeader()//note the case of hook name
+	public function hookDisplayBackOfficeHeader()//note the case of hook name
 	{
 
+		$this->context->controller->addJS('http://maps.googleapis.com/maps/api/js?libraries=places"
+        async defer');
+		$this->context->controller->addJS($this->_path.'views/js/adminbosearch.js');
 	}
 
 	public function displayForm()
