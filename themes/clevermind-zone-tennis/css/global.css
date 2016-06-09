@@ -7069,9 +7069,7 @@ div.star.star_hover:after {
     background: rgba(219, 213, 185, 0.5);
     min-height: 130px;
     height: 130px;
-    padding-right: 29px;
-    padding-left: 29px;
-    margin-top: 70px;
+
 }
 #facebook_block
 {
@@ -7089,8 +7087,8 @@ div.star.star_hover:after {
 @media (max-width: 991px) {
     #facebook_block,
     #cmsinfo_block {
-        min-height: 354px;
-        height: 354px;
+        min-height: 100%;
+        height: 100%;
         padding-left: 13px;
         padding-right: 13px; } }
 @media (max-width: 767px) {
@@ -7117,34 +7115,26 @@ div.star.star_hover:after {
     border: 1px solid #aaaaaa;
     padding-bottom: 10px; }
 #cmsinfo_block {
-    border-left: 1px solid #d9d9d9; }
+    border-left: 1px solid #d9d9d9;
+    margin-top: -5%;
+}
 @media (max-width: 767px) {
     #cmsinfo_block {
         border: none;
         margin-top: 10px; } }
-#cmsinfo_block > div {
-    padding: 8px 10px 0 0; }
-@media (max-width: 767px) {
-    #cmsinfo_block > div {
-        padding-top: 20px; } }
-@media (max-width: 479px) {
-    #cmsinfo_block > div {
-        width: 100%;
-        border-top: 1px solid #d9d9d9; } }
 #cmsinfo_block > div + div {
     border-left: 1px solid #d9d9d9;
-    min-height: 344px;
-    padding-left: 29px; }
+     }
 @media (max-width: 479px) {
     #cmsinfo_block > div + div {
         border-left: none;
         padding-left: 10px;
         min-height: 1px;
         padding-bottom: 15px; } }
-#cmsinfo_block p a:hover img{
+#cmsinfo_block p a:hover {
     background: #ffc000;
     width: 100%;
-    height: 130px;
+    height: 100%;
     margin-left: -20px;
 }
 @media (max-width: 991px) {
@@ -7314,12 +7304,7 @@ div.star.star_hover:after {
     #home-page-tabs > li.active a, #home-page-tabs > li a:hover{
         margin: 2px;
     }
-    .button.ajax_add_to_cart_button {
-        top: 10px;
-    }
-    .button.lnk_view {
-        top: 10px;
-    }
+
 
 }
 
@@ -7386,6 +7371,10 @@ div.star.star_hover:after {
     #home-page-tabs{
         margin: 0 25%;
     }
+    .cmsInfo{
+        float: left;
+        margin-left: 15%;
+    }
 
 }
 /* ============================================== */
@@ -7401,6 +7390,10 @@ div.star.star_hover:after {
     }
     #home-page-tabs > li a{
         margin: 2px;
+    }
+    .cmsInfo{
+        float: left;
+        margin-left: 15%;
     }
 
 }
@@ -7418,6 +7411,20 @@ div.star.star_hover:after {
     #home-page-tabs > li a{
         margin: 2px;
     }
+    #cmsinfo_block {
+        margin-top: -17%;
+    }
+    #cmsinfo_block > div + div{
+        padding-left: 0;
+    }
+    .cmsInfo{
+        float: left;
+        margin-left: 15%;
+    }
+    #cmsinfo_block > div{
+        padding-top: 20px;
+        width: 100%;
+    }
 
 }
 /* ============================================== */
@@ -7433,6 +7440,21 @@ div.star.star_hover:after {
     }
     #home-page-tabs > li a{
         margin: 2px;
+    }
+    #cmsinfo_block {
+        margin-top: -17%;
+    }
+
+    #cmsinfo_block > div + div{
+        padding-left: 0;
+    }
+    .cmsInfo{
+        float: left;
+    }
+    #cmsinfo_block > div{
+        margin-left: -50px;
+        padding-top: 20px;
+        width: 100%;
     }
 
 }
@@ -7451,6 +7473,21 @@ div.star.star_hover:after {
     #home-page-tabs > li a{
         margin: 2px;
     }
+    #cmsinfo_block {
+        margin-top: -17%;
+    }
+
+    #cmsinfo_block > div + div{
+        padding-left: 0;
+    }
+    .cmsInfo{
+        float: left;
+    }
+    #cmsinfo_block > div{
+        margin-left: -50px;
+        padding-top: 20px;
+        width: 100%;
+    }
 
 }
 
@@ -7468,6 +7505,21 @@ div.star.star_hover:after {
     #home-page-tabs > li a{
         margin: 2px;
     }
+    #cmsinfo_block {
+        margin-top: -17%;
+    }
+
+    #cmsinfo_block > div + div{
+        padding-left: 0;
+    }
+    .cmsInfo{
+        float: left;
+    }
+    #cmsinfo_block > div{
+        margin-left: -50px;
+        padding-top: 20px;
+        width: 100%;
+    }
 
 }
 /* ============================================== */
@@ -7484,4 +7536,25 @@ div.star.star_hover:after {
     #home-page-tabs > li a{
         margin: 2px;
     }
+    #cmsinfo_block {
+        margin-top: -17%;
+    }
+
+    #cmsinfo_block > div + div{
+        padding-left: 0;
+    }
+   .cmsInfo{
+        float: left;
+
+    }
+    #cmsinfo_block > div{
+        margin-left: -50px;
+        padding-top: 20px;
+        width: 100%;
+    }
+
+}
+.cmsInfo{
+    float: left;
+    margin: 0;
 }
