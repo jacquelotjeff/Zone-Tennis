@@ -23,10 +23,18 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 <!DOCTYPE HTML>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"{if isset($language_code) && $language_code} lang="{$language_code|escape:'html':'UTF-8'}"{/if}><![endif]-->
-<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8 ie7"{if isset($language_code) && $language_code} lang="{$language_code|escape:'html':'UTF-8'}"{/if}><![endif]-->
-<!--[if IE 8]><html class="no-js lt-ie9 ie8"{if isset($language_code) && $language_code} lang="{$language_code|escape:'html':'UTF-8'}"{/if}><![endif]-->
-<!--[if gt IE 8]> <html class="no-js ie9"{if isset($language_code) && $language_code} lang="{$language_code|escape:'html':'UTF-8'}"{/if}><![endif]-->
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" {if isset($language_code) && $language_code}
+      lang="{$language_code|escape:'html':'UTF-8'}" {/if}><![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8 ie7" {if isset($language_code) && $language_code}
+      lang="{$language_code|escape:'html':'UTF-8'}" {/if}><![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9 ie8" {if isset($language_code) && $language_code}
+      lang="{$language_code|escape:'html':'UTF-8'}" {/if}><![endif]-->
+<!--[if gt IE 8]>
+<html class="no-js ie9" {if isset($language_code) && $language_code} lang="{$language_code|escape:'html':'UTF-8'}"
+      {/if}><![endif]-->
 <html{if isset($language_code) && $language_code} lang="{$language_code|escape:'html':'UTF-8'}"{/if}>
 	<head>
 		<meta charset="utf-8" />
@@ -90,7 +98,7 @@
 										<img class="logo img-responsive" src="{$logo_url}" alt="{$shop_name|escape:'html':'UTF-8'}"{if isset($logo_image_width) && $logo_image_width} width="{$logo_image_width}"{/if}{if isset($logo_image_height) && $logo_image_height} height="{$logo_image_height}"{/if}/>
 									</a>
 								</div>
-												{capture name='displayNav'}{hook h='displayNav'}{/capture}
+					{capture name='displayNav'}{hook h='displayNav'}{/capture}
 					{if $smarty.capture.displayNav}
 						<div class="nav">
 							<div class="container">
