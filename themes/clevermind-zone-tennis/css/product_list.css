@@ -113,6 +113,7 @@ ul.product_list .comments_note {
 ul.product_list .functional-buttons div a, ul.product_list .functional-buttons div label {
   font-weight: bold;
   color: #777676;
+  margin-left:21%;
   cursor: pointer; }
   ul.product_list .functional-buttons div a:hover, ul.product_list .functional-buttons div label:hover {
     color: #000; }
@@ -222,24 +223,18 @@ ul.product_list.grid > li {
       ul.product_list.grid > li .product-container .button-container .ajax_add_to_cart_button,
       ul.product_list.grid > li .product-container .button-container span.button,
       ul.product_list.grid > li .product-container .button-container .lnk_view {
-        margin: 0 12px 10px 6px; }
+        margin: 0 -8px -4px 6px; }
     ul.product_list.grid > li .product-container .functional-buttons {
-      background: url(../img/functional-bt-shadow.png) repeat-x;
-      padding: 11px 0 5px; }
+      text-align: center;
+    }
       @media (min-width: 1200px) {
         ul.product_list.grid > li .product-container .functional-buttons {
           display: none; } }
       ul.product_list.grid > li .product-container .functional-buttons div {
-        width: 50%;
+        width: 80%;
         float: left;
-        padding: 3px 0 4px 0; }
+        margin-top:-3% }
   @media (min-width: 1200px) {
-    /*ul.product_list.grid > li.hovered .product-container {
-      -moz-box-shadow: rgba(0, 0, 0, 0.17) 0 0 13px;
-      -webkit-box-shadow: rgba(0, 0, 0, 0.17) 0 0 13px;
-      box-shadow: rgba(0, 0, 0, 0.17) 0 0 13px;
-      position: relative;
-      z-index: 10; }*/
       ul.product_list.grid > li.hovered .product-container .content_price {
         display: none; }
       ul.product_list.grid > li.hovered .product-container .product-image-container .content_price {
@@ -403,3 +398,106 @@ Product list(Index page) Styles
   border: 1px solid #d6d4d4; }
 
 /*# sourceMappingURL=product_list.css.map */
+
+/*# behnoush.norouzali@yahoo.fr */
+/* ================================================ */
+/* Responsive - Media queries                       */
+/* ================================================ */
+
+
+/* ============================================== */
+/* HDTV                                           */
+/*                                      1920x1080 */
+/* ============================================== */
+@media screen and (min-width: 1080px) and (max-width: 1920px) {
+
+
+/* ============================================== */
+/* Widescreen                                     */
+/*                                       1280x800 */
+/* ============================================== */
+@media screen and (min-width: 800px) and (max-width: 1280px) {
+
+}
+
+/* ============================================== */
+/* Twitter Bootstrap                              */
+/*                                       980x     */
+/* ============================================== */
+@media screen and (min-width: 980px) {
+
+}
+
+/* ============================================== */
+/* Twitter Bootstrap                              */
+/*                                       x979     */
+/* ============================================== */
+@media screen and (max-width: 979px) {
+
+}
+/* ============================================== */
+/* iPad Landscape & Portrait                      */
+/*                                       1024x768 */
+/* ============================================== */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+}
+/* ============================================== */
+/* iPad Landscape                                 */
+/*                                       1024x768 */
+/* ============================================== */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:landscape) {
+
+}
+
+/* ============================================== */
+/* iPad Portrait                                  */
+/*                                       768x1024 */
+/* ============================================== */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:portrait) {
+
+}
+/* ============================================== */
+/* Small Tablet Landscape/Portrait                */
+/*                                        800x600 */
+/* ============================================== */
+@media screen and (min-width: 600px) and (max-width: 800px) {
+
+}
+/* ============================================== */
+/* iPhone5/Android landscape (& narrow browser)   */
+/*                                        568x320 */
+/* ============================================== */
+@media screen and (min-width: 320px) and (max-width:568px) {
+
+}
+/* ============================================== */
+/* iPhone4/Android landscape (& narrow browser)   */
+/*                                        480x320 */
+/* ============================================== */
+@media screen and (min-width: 320px) and (max-width:480px) {
+
+}
+
+/* ============================================== */
+/* iPhone4/Android portrait               320x480 */
+/* iPhone5 portrait                       320x568 */
+/* ============================================== */
+@media screen and (max-width:320px) {
+
+}
+
+/* ============================================== */
+/* Smaller devices                                */
+/* Android Landscape                      320x240 */
+/* ============================================== */
+@media screen and (min-width:240px) and (max-width:320px) {
+
+}
+/* ============================================== */
+/* Smaller devices                                */
+/* Android Portrait                       240x320 */
+/* ============================================== */
+@media screen and (max-width:240px) {
+
+}
