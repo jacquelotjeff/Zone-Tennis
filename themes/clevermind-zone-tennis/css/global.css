@@ -4590,7 +4590,7 @@ textarea {
     resize: none; }
 #header {
     z-index: 5003;
-    background: url(../img/bg-theme8.jpg) repeat 50% 0;
+    background: #fff;
 }
 #header #nav-row {
     background: #333333;
@@ -5255,7 +5255,7 @@ ul.product_list.grid > li .product-container .product-image-container .product_i
     padding: 10px; }
 @media (min-width: 768px) {
     #home-page-tabs > li a {
-        padding: 1px 10px; } }
+        padding: 10px 10px; } }
 @media (min-width: 768px) and (max-width: 991px) {
     #home-page-tabs > li a {
         padding: 10px 10px; } }
@@ -5275,7 +5275,9 @@ ul.product_list.grid > li .product-container .product-image-container .product_i
     #home-page-tabs > li a:hover {
         margin: 0px 0; } }
 .block {
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    margin-top: 5%;
+}
 @media (max-width: 767px) {
     .block {
         margin-bottom: 0px; } }
@@ -5883,7 +5885,7 @@ div.star a:hover {
     padding: 5px 0;
     color: #333; }
 .header-container, .columns-container {
-    background: url(../img/bg-theme8.jpg) repeat 50% 0;
+    background: #fff;
 }
 .breadcrumb {
     display: inline-block;
@@ -7257,6 +7259,25 @@ div.star.star_hover:after {
     padding-top: 18px;
     margin: 0 0 9px;
 }
+.cmsInfo{
+    float: left;
+    margin: 0;
+}
+.tree-box{
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #eeeeee;
+    min-height: 345px;
+    overflow: hidden;
+    padding: 20px 30px 40px;
+    margin-left: 39px;
+    width: 30%;
+}
+.wrap ul li {
+    float: left;
+    margin-right: 7px;
+}
+
+
 /*# behnoush.norouzali@yahoo.fr */
 /* ================================================ */
 /* Responsive - Media queries                       */
@@ -7325,6 +7346,10 @@ div.star.star_hover:after {
     .button.lnk_view {
         top: 10px;
     }
+    .tree-box{
+        width: 100%;
+        margin-left: 0;
+    }
 
 }
 /* ============================================== */
@@ -7344,6 +7369,10 @@ div.star.star_hover:after {
     .button.lnk_view {
         top: 10px;
     }
+    .tree-box{
+        width: 100%;
+        margin-left: 0;
+    }
 
 }
 /* ============================================== */
@@ -7360,6 +7389,10 @@ div.star.star_hover:after {
     .button.lnk_view {
         top: 10px;
     }
+    .tree-box{
+        width: 100%;
+        margin-left: 0;
+    }
 
 }
 
@@ -7374,6 +7407,10 @@ div.star.star_hover:after {
     .cmsInfo{
         float: left;
         margin-left: 15%;
+    }
+    .tree-box{
+        width: 100%;
+        margin-left: 0;
     }
 
 }
@@ -7394,6 +7431,10 @@ div.star.star_hover:after {
     .cmsInfo{
         float: left;
         margin-left: 15%;
+    }
+    .tree-box{
+        width: 100%;
+        margin-left: 0;
     }
 
 }
@@ -7419,11 +7460,14 @@ div.star.star_hover:after {
     }
     .cmsInfo{
         float: left;
-        margin-left: 15%;
     }
     #cmsinfo_block > div{
         padding-top: 20px;
         width: 100%;
+    }
+    .tree-box{
+        width: 100%;
+        margin-left: 0;
     }
 
 }
@@ -7455,6 +7499,10 @@ div.star.star_hover:after {
         margin-left: -50px;
         padding-top: 20px;
         width: 100%;
+    }
+    .tree-box{
+        width: 100%;
+        margin-left: 0;
     }
 
 }
@@ -7488,6 +7536,10 @@ div.star.star_hover:after {
         padding-top: 20px;
         width: 100%;
     }
+    .tree-box{
+        width: 100%;
+        margin-left: 0;
+    }
 
 }
 
@@ -7519,6 +7571,10 @@ div.star.star_hover:after {
         margin-left: -50px;
         padding-top: 20px;
         width: 100%;
+    }
+    .tree-box{
+        width: 100%;
+        margin-left: 0;
     }
 
 }
@@ -7552,9 +7608,9 @@ div.star.star_hover:after {
         padding-top: 20px;
         width: 100%;
     }
+    .tree-box{
+        width: 100%;
+        margin-left: 0;
+    }
 
-}
-.cmsInfo{
-    float: left;
-    margin: 0;
 }

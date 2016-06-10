@@ -24,7 +24,10 @@
   width: 50%;
   float: left;
   padding: 13px 15px 7px 15px;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  margin-left: 38%;
+  margin-top: -12%;
+}
   @media (max-width: 767px) {
     #footer #newsletter_block_left {
       width: 100%; } }
@@ -44,22 +47,22 @@
     #footer #newsletter_block_left .form-group .form-control {
       height: 45px;
       max-width: 267px;
-      background: #3c3c3c;
-      border-color: #515151;
-      color: #fff;
+      border: 1px solid #eeeeee;
+      color: #999;
       padding: 10px 43px 10px 12px;
       display: inline-block;
-      float: left; }
+      background: transparent;
+      float: left;
+    }
       #footer #newsletter_block_left .form-group .form-control:focus {
         -moz-box-shadow: black 0px 0px 0px;
         -webkit-box-shadow: black 0px 0px 0px;
         box-shadow: black 0px 0px 0px; }
     #footer #newsletter_block_left .form-group .button-small {
+      border: 1px solid #eeeeee;
+      color: #999;
       margin-left: -43px;
-      border: none;
-      background: none;
       text-align: center;
-      color: #908f8f;
       padding: 8px; }
       #footer #newsletter_block_left .form-group .button-small:before {
         content: "\f138";
@@ -67,7 +70,7 @@
         font-size: 28px;
         line-height: 28px; }
       #footer #newsletter_block_left .form-group .button-small:hover {
-        color: #fff !important; }
+        color: #ffc000 !important; }
       #footer #newsletter_block_left .form-group .button-small span {
         display: none; }
   #footer #newsletter_block_left .warning_inline {
@@ -88,3 +91,158 @@
     max-width: 300px !important; }
 
 /*# sourceMappingURL=blocknewsletter.css.map */
+
+
+/*# behnoush.norouzali@yahoo.fr */
+/* ================================================ */
+/* Responsive - Media queries                       */
+/* ================================================ */
+
+
+/* ============================================== */
+/* HDTV                                           */
+/*                                      1920x1080 */
+/* ============================================== */
+@media screen and (min-width: 1080px) and (max-width: 1920px) {
+
+}
+
+/* ============================================== */
+/* Widescreen                                     */
+/*                                       1280x800 */
+/* ============================================== */
+@media screen and (min-width: 800px) and (max-width: 1280px) {
+  #footer #newsletter_block_left{
+    margin-left: 30%;
+    margin-top: -64%;
+  }
+}
+
+/* ============================================== */
+/* Twitter Bootstrap                              */
+/*                                       980x     */
+/* ============================================== */
+@media screen and (min-width: 980px) {
+
+}
+
+/* ============================================== */
+/* Twitter Bootstrap                              */
+/*                                       x979     */
+/* ============================================== */
+@media screen and (max-width: 979px) {
+
+  #footer #newsletter_block_left{
+    margin-left: 30%;
+    margin-top: -64%;
+  }
+}
+/* ============================================== */
+/* iPad Landscape & Portrait                      */
+/*                                       1024x768 */
+/* ============================================== */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  #footer #newsletter_block_left{
+    margin-left: 30%;
+    margin-top: -64%;
+  }
+
+}
+/* ============================================== */
+/* iPad Landscape                                 */
+/*                                       1024x768 */
+/* ============================================== */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:landscape) {
+  #footer #newsletter_block_left{
+    margin-left: 30%;
+    margin-top: -64%;
+  }
+
+}
+
+/* ============================================== */
+/* iPad Portrait                                  */
+/*                                       768x1024 */
+/* ============================================== */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:portrait) {
+  #footer #newsletter_block_left{
+    margin-left: 30%;
+    margin-top: -64%;
+  }
+
+}
+/* ============================================== */
+/* Small Tablet Landscape/Portrait                */
+/*                                        800x600 */
+/* ============================================== */
+@media screen and (min-width: 600px) and (max-width: 800px) {
+  #footer #newsletter_block_left{
+    margin-left: 18%;
+    margin-top: -80%;
+  }
+
+}
+@media screen and (min-width: 765px) and (max-width: 800px) {
+  #footer #newsletter_block_left{
+    margin-left: 18%;
+    margin-top: -65%;
+  }
+
+}
+/* ============================================== */
+/* iPhone5/Android landscape (& narrow browser)   */
+/*                                        568x320 */
+/* ============================================== */
+@media screen and (min-width: 320px) and (max-width:568px) {
+  #footer #newsletter_block_left{
+    margin-left: 12%;
+    margin-top: -100%;
+  }
+
+}
+/* ============================================== */
+/* iPhone4/Android landscape (& narrow browser)   */
+/*                                        480x320 */
+/* ============================================== */
+@media screen and (min-width: 320px) and (max-width:480px) {
+  #footer #newsletter_block_left{
+    margin-left: 0;
+    margin-top: -148%;
+  }
+
+}
+
+/* ============================================== */
+/* iPhone4/Android portrait               320x480 */
+/* iPhone5 portrait                       320x568 */
+/* ============================================== */
+@media screen and (max-width:320px) {
+  #footer #newsletter_block_left{
+    margin-left: 0;
+    margin-top: -148%;
+  }
+
+}
+
+/* ============================================== */
+/* Smaller devices                                */
+/* Android Landscape                      320x240 */
+/* ============================================== */
+@media screen and (min-width:240px) and (max-width:320px) {
+  #footer #newsletter_block_left{
+    margin-left: 0;
+    margin-top: -148%;
+  }
+
+}
+/* ============================================== */
+/* Smaller devices                                */
+/* Android Portrait                       240x320 */
+/* ============================================== */
+@media screen and (max-width:240px) {
+  #footer #newsletter_block_left{
+    margin-left: 0;
+    margin-top: -148%;
+  }
+
+}
