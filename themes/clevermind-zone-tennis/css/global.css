@@ -5276,7 +5276,7 @@ ul.product_list.grid > li .product-container .product-image-container .product_i
         margin: 0px 0; } }
 .block {
     margin-bottom: 30px;
-    margin-top: 5%;
+    margin-top: 3%;
 }
 @media (max-width: 767px) {
     .block {
@@ -5286,10 +5286,8 @@ ul.product_list.grid > li .product-container .product-image-container .product_i
         margin-bottom: 20px; } }
 .block .title_block,
 .block h4 {
-    font: 600 18px/22px "Open Sans", sans-serif;
+    font: 500 18px/22px "Oswald",serif;
     color: #555454;
-    background: #f6f6f6;
-    border-top: 5px solid #333;
     text-transform: uppercase;
     padding: 14px 5px 17px 20px;
     margin-bottom: 20px; }
