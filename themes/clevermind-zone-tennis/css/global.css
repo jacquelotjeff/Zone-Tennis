@@ -5249,7 +5249,7 @@ ul.product_list.grid > li .product-container .product-image-container .product_i
         width: 100%; } }
 #home-page-tabs > li a {
     font: 500 18px "Open Sans", sans-serif;
-    color: #555454;
+    color: #ffc000;
     text-transform: uppercase;
     border: none;
     outline: none;
@@ -5265,8 +5265,7 @@ ul.product_list.grid > li .product-container .product-image-container .product_i
     border: none; }
 #home-page-tabs > li.active a,
 #home-page-tabs > li a:hover {
-    background: #ffc000;
-    color: #fff;
+    fontt: 500 18px/22px "Oswald",serif;
     padding: 10px; }
 @media (min-width: 768px) {
     #home-page-tabs > li.active a,
@@ -5289,7 +5288,7 @@ ul.product_list.grid > li .product-container .product-image-container .product_i
 .block .title_block,
 .block h4 {
     font: 500 18px/22px "Oswald",serif;
-    color: #555454;
+    color: #ffc000;
     text-transform: uppercase;
     padding: 14px 5px 17px 20px;
     margin-bottom: 20px; }
@@ -5318,7 +5317,7 @@ ul.product_list.grid > li .product-container .product-image-container .product_i
         content: ""; } }
 .block .title_block a,
 .block h4 a {
-    color: #555454; }
+    color: #ffc000; }
 .block .title_block a:hover,
 .block h4 a:hover {
     color: #333; }
@@ -7271,7 +7270,6 @@ div.star.star_hover:after {
     float: left;
     margin-right: 7px;
 }
-
 
 /*# behnoush.norouzali@yahoo.fr */
 /* ================================================ */
